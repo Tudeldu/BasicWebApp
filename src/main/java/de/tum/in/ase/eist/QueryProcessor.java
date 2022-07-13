@@ -29,6 +29,14 @@ public class QueryProcessor {
             }
             return "The largest number is "+out;
 
+        }else if(query.contains("plus")){
+            query=query.replaceAll("[^0-9]+", " ");
+            String[] arr=query.split(" ");
+            int sum=0;
+            for (String string : arr) {
+                sum+=Integer.parseInt(string);
+            }
+            return "The sum is "+sum;
         }
         return "";
     }
