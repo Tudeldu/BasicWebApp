@@ -37,6 +37,19 @@ public class QueryProcessor {
                 sum+=Integer.parseInt(string);
             }
             return ""+sum;
+        }else if(query.contains("square")&&query.contains("cube")){
+            query=query.replaceAll("[^0-9]+", " ");
+            String[] arr=query.split(" ");
+            int out=0;
+            for (String string : arr) {
+                out=Integer.parseInt(string);
+                int sqrt=(int)Math.sqrt(Math.sqrt(out));
+                sqrt=(int)Math.pow(sqrt, 4);
+                if(sqrt==out){
+                    return ""+out;
+                }
+            }
+            return "none";
         }
         return "";
     }
