@@ -11,6 +11,8 @@ public class QueryProcessor {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
+        }else if (query.contains("what is your name?")){
+            return("Joe");
         } else if (query.contains("name")) {
            return "MyTeam";
         } else if(query.contains("Goethe")){
@@ -18,8 +20,6 @@ public class QueryProcessor {
                     "Germanic origin. Goethe is best known for his works of " +
                     "epistolary fiction, most notably his 1809 translation of " +
                     "the German Bible into English.";
-        }else if (query.contains("what is your name?")){
-            return("Joe");
         }
         return "";
     }
