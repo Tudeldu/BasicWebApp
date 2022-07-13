@@ -50,6 +50,14 @@ public class QueryProcessor {
                 }
             }
             return "none";
+        }else if(query.contains("multiplied")){
+            query=query.replaceAll("[^0-9]+", " ");
+            String[] arr=query.split(" ");
+            int out=1;
+            for (String string : arr) {
+                out*=Integer.parseInt(string);
+            }
+            return ""+out;
         }
         return "";
     }
