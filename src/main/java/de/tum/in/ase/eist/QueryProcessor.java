@@ -18,6 +18,17 @@ public class QueryProcessor {
                     "Germanic origin. Goethe is best known for his works of " +
                     "epistolary fiction, most notably his 1809 translation of " +
                     "the German Bible into English.";
+        }else if(query.contains("largest")){
+            query=query.replaceAll("[^0-9]+", " ");
+            String[] arr=query.split(" ");
+            int out=Integer.parseInt(arr[0]);
+            for (String string : arr) {
+                if(out<Integer.parseInt(string)){
+                    out=Integer.parseInt(string);
+                }   
+            }
+            return "The largest number is "+out;
+
         }
         return "";
     }
